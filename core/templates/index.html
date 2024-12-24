@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <title>Baixar MP3 do YouTube</title>
+</head>
+<body>
+    <div class=margem>
+        <header class="header">
+            <img src="{% static 'img/logo.png' %}" alt="" class="logo">
+            <h1 class="text-center">P!R@t@r!A do YT</h1>
+        </header>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form">
+                <label for="url">URL do vídeo</label>
+                <input type="url" name="url" class="input" placeholder="Insíra a URL do vídeo, porra!" id="url">
+            </div>
+            <button type="submit" class="btn btn-primary">Baixar</button>
+            
+        </form>
+    </div>
+</body>
+</html>
